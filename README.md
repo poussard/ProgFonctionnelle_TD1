@@ -1,17 +1,16 @@
-Dans ce premier TD d’introduction, nous commençons par entrer quelques expressions _Scala_ simples pour nous familiariser avec le language. 
+Dans ce premier TD d’introduction, nous commençons par entrer quelques expressions _Scala_ simples pour nous familiariser avec le langage. 
 
-Dans un second temps , nous nous intéressons au calcul des termes de suites récurrentes simple, Syracuse et Fibonacci. 
+Dans un second temps, nous nous intéressons au calcul des termes de suites récurrentes simple, Syracuse et Fibonacci. 
 
 Liens utiles: 
 * Essayez Scala dans votre Browser 
-  * [scalafiddle.io](https://scalafiddle.io/sf/gKgxQY0/1)
   * [scastie.org](http://scastie.org/)
 * [First Steps to Scala (www.artima.com)](http://www.artima.com/scalazine/articles/steps.html)
 * [scala-lang.org](http://www.scala-lang.org)
 
 
 # 1 Premières expressions Scala
-Clicker droit sur votre projet scala, dans la section new choisisez "scala worksheetr"
+Dans votre Browser ([scastie.org] (http://scastie.org/)) ou sur votre poste en lançant le programme scala 
 
 ## Expressions 
 Saisissez par exemple 2 + 3 et validez par entrée. Scala vous répond 
@@ -111,7 +110,7 @@ Par contraste avec la reconnaissance de forme, les motifs sont complètement sp�
 >```
 Pour calculer 2^10, il suffit alors d’entrer `puissance(2,10)`
  
-## **Question 1.1**
+## **Question 1**
  * Combien de multiplications effectue t-on pour calculer ![equation](http://latex.codecogs.com/gif.latex?X^{n}) en utilisant cette méthode ?
  * Connaissez-vous une autre méthode de calcul plus efficace?
  * Implémenter celle-ci ( [aide (link)](http://fr.wikipedia.org/wiki/Exponentiation_rapide) )
@@ -173,7 +172,7 @@ Le programme showSquares affiche les carrés d’une liste de nombres sur la con
 >```
 Observez comme les programmes show et showSquares sont similaires : leur seule différence réside dans la façon dont le nombre va être transformé avant d’être affiché. Peut-on factoriser la parties communes de ces deux programmes ? Pour cela il faut transformer ce qui les différencie en un paramètre. Dans notre cas, il s’agit d’une fonction qui transforme un nombre en un autre nombre.
 
-## **Question 1.2** 
+## **Question 2** 
  Implémentez la fonction d’ordre supérieur show(f: Int => Int, xs: List[Int]), 
  qui affiche tous les nombres de la liste xs après les avoir transformés avec la fonction f. 
  Exemples d’utilisation :
@@ -192,7 +191,7 @@ On considère la suite U définie par U(0) = N (un entier naturel positif)
 
 ![Texte alternatif](CodeCogsEqn.gif)
 
-## **Question 2**
+## **Question 3**
 Implémenté une fonction qui prend U(0) en paramètre et il retournera  le premier rang "n" tel que U(n) = 1 
 
 # 3 La suite de Fibonacci
@@ -206,19 +205,19 @@ Temps exponentiel:
 
 On souhaite pouvoir calculer à l’aide de _Scala_ n’importe quel terme de cette suite. _Scala_ permettant de définir simplement des fonctions de manière récursive, une idée naturelle est de s’inspirer directement de la définition de la suite.
 
-## **Question 3**
+## **Question 4**
  En utilisant la définition récursive de la suite ![equation](http://latex.codecogs.com/gif.latex?F_{n}) donnée ci-dessus implémenter
  * Une fonction fib telle que fib(n) calcule ![equation](http://latex.codecogs.com/gif.latex?F_{n})         
  * Qui a pour signature `fibExp : (n :Int) Long`
 
-## **Question 4**
+## **Question 5**
   * Calculez les premiers entiers de Fibonacci, puis calculez ![equation](http://latex.codecogs.com/gif.latex?F_{40}). Comment expliquez-vous que le temps de calcul soit si long ?
 
 ## 2.2 Calcul en temps linéaire
 On peut effectuer un calcul plus efficace des termes de la suite en écrivant une fonction fibLin qui retourne une paire de deux termes consécutifs de la suite,
 c’est-à-dire telle que fib2 n donne la paire ![equation](http://latex.codecogs.com/gif.latex?(F_{n},F_{n+1})) chaque appel de la fonction fib2 ne nécessitera alors plus qu’un seul appel récursif.
 
-## **Question 5**
+## **Question 6**
  * Implémenter une telle fonction fibLin.( [aide (link)](http://fr.wikipedia.org/wiki/Suite_de_Fibonacci) ) 
  * Qui a pour signature :  `fibLin : (n: Int, b: Long, a: Long) Long`
  * Combien d’additions effectue-t-on pour calculer ![equation](http://latex.codecogs.com/gif.latex?F_{n}) avec cette méthode ?
