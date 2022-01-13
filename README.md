@@ -189,7 +189,7 @@ Le problème de Syracuse est posé de la manière suivante:
 
 On considère la suite U définie par U(0) = N (un entier naturel positif) 
 
-![Texte alternatif](CodeCogsEqn.gif)
+![Texte alternatif](sy.png)
 
 ## **Question 3**
 Implémenté une fonction qui prend U(0) en paramètre et il retournera  le premier rang "n" tel que U(n) = 1 
