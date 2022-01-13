@@ -10,7 +10,7 @@ Liens utiles:
 
 
 # 1 Premières expressions Scala
-Dans votre Browser ([scastie.org] (http://scastie.org/)) ou sur votre poste en lançant le programme scala 
+Dans votre Browser ([scastie.org] (http://scastie.org/)) , sur votre poste en lançant le programme scala, ou dans un scala worksheet eclipse ( dans la perpective scala : file/new/scala worksheet
 
 ## Expressions 
 Saisissez par exemple 2 + 3 et validez par entrée. Scala vous répond 
